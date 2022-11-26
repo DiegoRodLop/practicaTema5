@@ -20,7 +20,7 @@ namespace Formulario_para_git
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o';//añadimos el valor del tipo de telegrama ordinario para poder realizar el calculo
             int numPalabras = 0;
             double coste;
             //Leo el telegrama
