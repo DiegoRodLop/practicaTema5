@@ -26,11 +26,14 @@ namespace Formulario_para_git
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            if (Curgente.Checked)
                 tipoTelegrama = 'u';
             //Obtengo el número de palabras que forma el telegrama
             numPalabras = textoTelegrama.Length;
             //Si el telegrama es ordinario
+            if (COrdinario.Checked)//marcamos que si tenemos marcado el checkbox circular ordinario el tipo de telegrama es o
+                tipoTelegrama = 'o';
+
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
                     coste = 25;
@@ -47,7 +50,6 @@ namespace Formulario_para_git
                 coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
         }
-
     }
 
 }
